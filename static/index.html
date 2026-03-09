@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Maps Parser Pro</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+    <div class="app">
+        <div class="sidebar">
+            <div class="logo">🗺 Parser Pro</div>
+            <button class="btn btn-primary" onclick="openAddTaskPanel()">➕ Add Task</button>
+            <button class="btn btn-secondary" style="margin-top: 10px;" onclick="openSettingsPanel()">⚙️ Default
+                Settings</button>
+            <div class="task-list" id="task-list">
+                <!-- Tasks will be injected here -->
+            </div>
+            <button class="btn btn-success" style="margin-top: 20px; font-size: 16px;" onclick="startParsing()">▶ START
+                PARSING</button>
+        </div>
+
+        <div class="main">
+            <div class="bg-blur"></div>
+
+            <!-- Welcome Panel -->
+            <div id="welcome-panel" class="panel active">
+                <div
+                    style="height: 100%; display: flex; align-items: center; justify-content: center; color: var(--text-muted); font-size: 20px; margin-top: 20%;">
+                    Select a task on the left or create a new one 🚀
+                </div>
+            </div>
+
+            <!-- Settings Panel -->
+            <div id="settings-panel" class="panel">
+                <div class="card">
+                    <h2>⚙️ Default Settings</h2>
+                    <p style="color: var(--text-muted); margin-bottom: 20px;">These values will be automatically
+                        prepopulated when creating a new Task.</p>
+
+                    <div class="grid-2">
+                        <div class="form-group">
+                            <label>Leads Quota:</label>
+                            <input type="number" id="def-quota" class="input">
+                        </div>
+                    </div>
+
+                    <h3 style="margin: 20px 0 10px;">Grid Parameters</h3>
+                    <div class="grid-2">
+                        <div class="form-group">
+                            <label>Radius (km):</label>
+                            <input type="number" id="def-radius" class="input" step="0.5">
+                        </div>
+                        <div class="form-group">
+                            <label>Step (km):</label>
+                            <input type="number" id="def-step" class="input" step="0.5">
+                        </div>
+                    </div>
+                    <div class="form-group" style="margin-top: 10px;">
+                        <label>Parsing Speed Mode:</label>
+                        <select id="def-mode" class="input">
+                            <option value="Fast">🚀 Fast (Skips zones with &lt;= 2 new leads)</option>
+                            <option value="Medium">⚖️ Medium (Skips zones if 0 new leads)</option>
+                            <option value="Deep">🕵️ Deep (Never skips zones automatically)</option>
+                        </select>
+                    </div>
+
+                    <h3 style="margin: 20px 0 10px;">Smart Filters</h3>
+                    <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 20px;">
+                        <label class="switch">
+                            <input type="checkbox" id="def-filter-toggle">
+                            <span class="slider"></span>
+                        </label>
+                        <span>Enable review filtering by default?</span>
+                    </div>
+
+                    <div class="grid-2">
+                        <div class="form-group">
+                            <label>Min reviews:</label>
+                            <input type="number" id="def-min" class="input">
+                        </div>
+                        <div class="form-group">
+                            <label>Max reviews:</label>
+                            <input type="number" id="def-max" class="input">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Review Freshness:</label>
+                        <select id="def-freshness" class="input">
+                            <option>Any</option>
+                            <option>1 week</option>
+                            <option>1 month</option>
+                            <option>3 months</option>
+                            <option>6 months</option>
+                            <option>1 year</option>
+                        </select>
+                    </div>
+
+                    <button class="btn btn-primary" style="margin-top: 20px; width: 100%;" onclick="saveSettings()">💾
+                        Save Default Settings</button>
+                </div>
+            </div>
+
+            <!-- Add Task Panel -->
+            <div id="add-task-panel" class="panel">
+                <div class="card">
+                    <h2>New Task</h2>
+
+                    <div class="grid-2">
+                        <div class="form-group">
+                            <label>Task Name:</label>
+                            <input type="text" id="task-name" class="input" value="New Task">
+                        </div>
+                        <div class="form-group">
+                            <label>Quota (target leads):</label>
+                            <input type="number" id="task-quota" class="input" value="100">
+                        </div>
+                    </div>
+
+                    <div class="grid-2">
+                        <!-- Cities Box -->
+                        <div class="form-group combo-container" id="city-combo-container">
+                            <label>Cities</label>
+                            <div style="display: flex; gap: 10px;">
+                                <input type="text" id="city-input" class="input" placeholder="Start typing a city..."
+                                    autocomplete="off">
+                                <button type="button" class="btn btn-secondary" onclick="addCity()">➕</button>
+                            </div>
+                            <div class="combo-list" id="city-list"></div>
+                            <div class="tags" id="city-tags"></div>
+                        </div>
+
+                        <!-- Niches Box -->
+                        <div class="form-group combo-container" id="niche-combo-container">
+                            <label>Niches</label>
+                            <div style="display: flex; gap: 10px;">
+                                <input type="text" id="niche-input" class="input" placeholder="Start typing a niche..."
+                                    autocomplete="off">
+                                <button type="button" class="btn btn-secondary" onclick="addNiche()">➕</button>
+                            </div>
+                            <div class="combo-list" id="niche-list"></div>
+                            <div class="tags" id="niche-tags"></div>
+                        </div>
+                    </div>
+
+                    <h3 style="margin: 20px 0 10px;">Search Parameters</h3>
+                    <div class="grid-2">
+                        <div class="form-group">
+                            <label>Grid Radius (km):</label>
+                            <input type="number" id="task-radius" class="input" value="20.0" step="0.5">
+                        </div>
+                        <div class="form-group">
+                            <label>Grid Step (km):</label>
+                            <input type="number" id="task-step" class="input" value="6.0" step="0.5">
+                        </div>
+                    </div>
+                    <div class="form-group" style="margin-top: 10px;">
+                        <label>Parsing Speed Mode:</label>
+                        <select id="task-mode" class="input">
+                            <option value="Fast">🚀 Fast (Skips zones with &lt;= 2 new leads)</option>
+                            <option value="Medium" selected>⚖️ Medium (Skips zones if 0 new leads)</option>
+                            <option value="Deep">🕵️ Deep (Never skips zones automatically)</option>
+                        </select>
+                    </div>
+
+                    <h3 style="margin: 20px 0 10px;">Smart Filters</h3>
+                    <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px;">
+                        <label class="switch">
+                            <input type="checkbox" id="filter-toggle"
+                                onchange="document.getElementById('filters-box').classList.toggle('open')">
+                            <span class="slider"></span>
+                        </label>
+                        <span>Enable reviews filtering (slightly slows down parsing)</span>
+                    </div>
+
+                    <div id="filters-box" class="filters-box">
+                        <div class="grid-2">
+                            <div class="form-group">
+                                <label>Min reviews:</label>
+                                <input type="number" id="filter-min" class="input" value="0">
+                            </div>
+                            <div class="form-group">
+                                <label>Max reviews:</label>
+                                <input type="number" id="filter-max" class="input" value="50">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Review Freshness:</label>
+                            <select id="filter-freshness" class="input">
+                                <option>Any</option>
+                                <option>1 week</option>
+                                <option>1 month</option>
+                                <option>3 months</option>
+                                <option>6 months</option>
+                                <option>1 year</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <button class="btn btn-primary" style="margin-top: 20px; width: 100%;" onclick="saveTask()">💾 Save
+                        Task</button>
+                </div>
+            </div>
+
+            <!-- View Task Panel -->
+            <div id="view-task-panel" class="panel">
+                <div class="card" id="view-task-content">
+                    <!-- Injected via JS -->
+                </div>
+            </div>
+
+            <!-- Dashboard Panel -->
+            <div id="dashboard-panel" class="panel">
+                <div class="card" style="margin-bottom: 20px;">
+                    <h2 id="dash-status">Status: Starting engine...</h2>
+
+                    <div class="controls">
+                        <button class="btn btn-warning" id="btn-pause" onclick="togglePause()">⏸ Pause</button>
+                        <button class="btn btn-danger" onclick="stopEngine()">⏹ Stop</button>
+                        <div style="flex:1"></div>
+                        <button class="btn btn-secondary" onclick="skip('NICHE')">⏭ Skip Niche</button>
+                        <button class="btn btn-secondary" onclick="skip('CITY')">⏭ Skip City</button>
+                        <button class="btn btn-secondary" style="background:#4CAF50; color:black;" onclick="skip('ZONE')">⏭ Skip Zone (Fast Forward)</button>
+                    </div>
+
+                    <div class="progress-container">
+                        <div id="dash-progress" class="progress-text">Preparing...</div>
+                        <div class="progress-bar-bg">
+                            <div id="dash-progress-fill" class="progress-bar-fill"></div>
+                        </div>
+                    </div>
+
+                    <div class="terminal" id="terminal-log">
+                        <!-- Logs here -->
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="/static/script.js?v=4"></script>
+</body>
+
+</html>
