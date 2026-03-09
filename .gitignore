@@ -1,0 +1,28 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual Environments
+venv/
+env/
+.venv/
+.env/
+
+# IDE files
+.idea/
+.vscode/
+
+# User Data and Configuration Files
+settings.json
+projects.json
+data/progress.json
+data/app_log.txt
+
+# Generated Results
+*.csv
+Rejects_*.txt
+
+# OS generated files
+.DS_Store
+Thumbs.db
