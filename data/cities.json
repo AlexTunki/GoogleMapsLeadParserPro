@@ -1,0 +1,502 @@
+[
+    {
+        "name": "New York",
+        "lat": 40.7128,
+        "lng": -74.0060
+    },
+    {
+        "name": "Los Angeles",
+        "lat": 34.0522,
+        "lng": -118.2437
+    },
+    {
+        "name": "Chicago",
+        "lat": 41.8781,
+        "lng": -87.6298
+    },
+    {
+        "name": "Houston",
+        "lat": 29.7604,
+        "lng": -95.3698
+    },
+    {
+        "name": "Phoenix",
+        "lat": 33.4484,
+        "lng": -112.0740
+    },
+    {
+        "name": "Philadelphia",
+        "lat": 39.9526,
+        "lng": -75.1652
+    },
+    {
+        "name": "San Antonio",
+        "lat": 29.4241,
+        "lng": -98.4936
+    },
+    {
+        "name": "San Diego",
+        "lat": 32.7157,
+        "lng": -117.1611
+    },
+    {
+        "name": "Dallas",
+        "lat": 32.7767,
+        "lng": -96.7970
+    },
+    {
+        "name": "Austin",
+        "lat": 30.2672,
+        "lng": -97.7431
+    },
+    {
+        "name": "Jacksonville",
+        "lat": 30.3322,
+        "lng": -81.6557
+    },
+    {
+        "name": "San Jose",
+        "lat": 37.3382,
+        "lng": -121.8863
+    },
+    {
+        "name": "Fort Worth",
+        "lat": 32.7555,
+        "lng": -97.3308
+    },
+    {
+        "name": "Columbus",
+        "lat": 39.9612,
+        "lng": -82.9988
+    },
+    {
+        "name": "Charlotte",
+        "lat": 35.2271,
+        "lng": -80.8431
+    },
+    {
+        "name": "Indianapolis",
+        "lat": 39.7684,
+        "lng": -86.1581
+    },
+    {
+        "name": "San Francisco",
+        "lat": 37.7749,
+        "lng": -122.4194
+    },
+    {
+        "name": "Seattle",
+        "lat": 47.6062,
+        "lng": -122.3321
+    },
+    {
+        "name": "Denver",
+        "lat": 39.7392,
+        "lng": -104.9903
+    },
+    {
+        "name": "Washington",
+        "lat": 38.9072,
+        "lng": -77.0369
+    },
+    {
+        "name": "Boston",
+        "lat": 42.3601,
+        "lng": -71.0589
+    },
+    {
+        "name": "El Paso",
+        "lat": 31.7619,
+        "lng": -106.4850
+    },
+    {
+        "name": "Nashville",
+        "lat": 36.1627,
+        "lng": -86.7816
+    },
+    {
+        "name": "Detroit",
+        "lat": 42.3314,
+        "lng": -83.0458
+    },
+    {
+        "name": "Oklahoma City",
+        "lat": 35.4676,
+        "lng": -97.5164
+    },
+    {
+        "name": "Portland",
+        "lat": 45.5152,
+        "lng": -122.6784
+    },
+    {
+        "name": "Las Vegas",
+        "lat": 36.1699,
+        "lng": -115.1398
+    },
+    {
+        "name": "Memphis",
+        "lat": 35.1495,
+        "lng": -90.0490
+    },
+    {
+        "name": "Louisville",
+        "lat": 38.2527,
+        "lng": -85.7585
+    },
+    {
+        "name": "Baltimore",
+        "lat": 39.2904,
+        "lng": -76.6122
+    },
+    {
+        "name": "Milwaukee",
+        "lat": 43.0389,
+        "lng": -87.9065
+    },
+    {
+        "name": "Albuquerque",
+        "lat": 35.0844,
+        "lng": -106.6504
+    },
+    {
+        "name": "Tucson",
+        "lat": 32.2226,
+        "lng": -110.9747
+    },
+    {
+        "name": "Fresno",
+        "lat": 36.7378,
+        "lng": -119.7871
+    },
+    {
+        "name": "Sacramento",
+        "lat": 38.5816,
+        "lng": -121.4944
+    },
+    {
+        "name": "Kansas City",
+        "lat": 39.0997,
+        "lng": -94.5786
+    },
+    {
+        "name": "Mesa",
+        "lat": 33.4152,
+        "lng": -111.8315
+    },
+    {
+        "name": "Atlanta",
+        "lat": 33.7490,
+        "lng": -84.3880
+    },
+    {
+        "name": "Omaha",
+        "lat": 41.2565,
+        "lng": -95.9345
+    },
+    {
+        "name": "Colorado Springs",
+        "lat": 38.8339,
+        "lng": -104.8214
+    },
+    {
+        "name": "Raleigh",
+        "lat": 35.7796,
+        "lng": -78.6382
+    },
+    {
+        "name": "Miami",
+        "lat": 25.7617,
+        "lng": -80.1918
+    },
+    {
+        "name": "Virginia Beach",
+        "lat": 36.8529,
+        "lng": -75.9780
+    },
+    {
+        "name": "Oakland",
+        "lat": 37.8044,
+        "lng": -122.2712
+    },
+    {
+        "name": "Minneapolis",
+        "lat": 44.9778,
+        "lng": -93.2650
+    },
+    {
+        "name": "Tulsa",
+        "lat": 36.1540,
+        "lng": -95.9928
+    },
+    {
+        "name": "Arlington",
+        "lat": 32.7357,
+        "lng": -97.1081
+    },
+    {
+        "name": "New Orleans",
+        "lat": 29.9511,
+        "lng": -90.0715
+    },
+    {
+        "name": "Wichita",
+        "lat": 37.6872,
+        "lng": -97.3301
+    },
+    {
+        "name": "Cleveland",
+        "lat": 41.4993,
+        "lng": -81.6944
+    },
+    {
+        "name": "Toronto",
+        "lat": 43.6532,
+        "lng": -79.3832
+    },
+    {
+        "name": "Montreal",
+        "lat": 45.5017,
+        "lng": -73.5673
+    },
+    {
+        "name": "Vancouver",
+        "lat": 49.2827,
+        "lng": -123.1207
+    },
+    {
+        "name": "Calgary",
+        "lat": 51.0447,
+        "lng": -114.0719
+    },
+    {
+        "name": "Edmonton",
+        "lat": 53.5461,
+        "lng": -113.4938
+    },
+    {
+        "name": "Ottawa",
+        "lat": 45.4215,
+        "lng": -75.6972
+    },
+    {
+        "name": "Winnipeg",
+        "lat": 49.8951,
+        "lng": -97.1384
+    },
+    {
+        "name": "Quebec City",
+        "lat": 46.8139,
+        "lng": -71.2080
+    },
+    {
+        "name": "Hamilton",
+        "lat": 43.2560,
+        "lng": -79.8711
+    },
+    {
+        "name": "Kitchener",
+        "lat": 43.4516,
+        "lng": -80.4925
+    },
+    {
+        "name": "London",
+        "lat": 43.0096,
+        "lng": -81.334000
+    },
+    {
+        "name": "Victoria",
+        "lat": 48.4284,
+        "lng": -123.3656
+    },
+    {
+        "name": "Halifax",
+        "lat": 44.6488,
+        "lng": -63.5752
+    },
+    {
+        "name": "Oshawa",
+        "lat": 43.8971,
+        "lng": -78.8658
+    },
+    {
+        "name": "Windsor",
+        "lat": 42.3149,
+        "lng": -83.0364
+    },
+    {
+        "name": "Saskatoon",
+        "lat": 52.1332,
+        "lng": -106.6700
+    },
+    {
+        "name": "Regina",
+        "lat": 50.4452,
+        "lng": -104.6189
+    },
+    {
+        "name": "St. John's",
+        "lat": 47.5615,
+        "lng": -52.7126
+    },
+    {
+        "name": "Kelowna",
+        "lat": 49.8880,
+        "lng": -119.4960
+    },
+    {
+        "name": "Barrie",
+        "lat": 44.3894,
+        "lng": -79.6903
+    },
+    {
+        "name": "Sherbrooke",
+        "lat": 45.4010,
+        "lng": -71.8929
+    },
+    {
+        "name": "Guelph",
+        "lat": 43.5448,
+        "lng": -80.2482
+    },
+    {
+        "name": "Abbotsford",
+        "lat": 49.0504,
+        "lng": -122.3045
+    },
+    {
+        "name": "Kingston",
+        "lat": 44.2312,
+        "lng": -76.4860
+    },
+    {
+        "name": "Kanata",
+        "lat": 45.3089,
+        "lng": -75.9031
+    },
+    {
+        "name": "Trois-Rivieres",
+        "lat": 46.3432,
+        "lng": -72.5426
+    },
+    {
+        "name": "Moncton",
+        "lat": 46.0880,
+        "lng": -64.7782
+    },
+    {
+        "name": "Chicoutimi",
+        "lat": 48.4276,
+        "lng": -71.0537
+    },
+    {
+        "name": "Milton",
+        "lat": 43.5168,
+        "lng": -79.8772
+    },
+    {
+        "name": "Red Deer",
+        "lat": 52.2681,
+        "lng": -113.8112
+    },
+    {
+        "name": "Brantford",
+        "lat": 43.1415,
+        "lng": -80.2606
+    },
+    {
+        "name": "Thunder Bay",
+        "lat": 48.3809,
+        "lng": -89.2477
+    },
+    {
+        "name": "White Rock",
+        "lat": 49.0253,
+        "lng": -122.8030
+    },
+    {
+        "name": "Nanaimo",
+        "lat": 49.1659,
+        "lng": -123.9401
+    },
+    {
+        "name": "Sudbury",
+        "lat": 46.4917,
+        "lng": -80.9930
+    },
+    {
+        "name": "Lethbridge",
+        "lat": 49.6946,
+        "lng": -112.8329
+    },
+    {
+        "name": "Saint-Jean-sur-Richelieu",
+        "lat": 45.3057,
+        "lng": -73.2533
+    },
+    {
+        "name": "Peterborough",
+        "lat": 44.3091,
+        "lng": -78.3197
+    },
+    {
+        "name": "Kamloops",
+        "lat": 50.6745,
+        "lng": -120.3273
+    },
+    {
+        "name": "Cap-de-la-Madeleine",
+        "lat": 46.3667,
+        "lng": -72.5000
+    },
+    {
+        "name": "Chilliwack",
+        "lat": 49.1579,
+        "lng": -121.9515
+    },
+    {
+        "name": "Sarnia",
+        "lat": 42.9745,
+        "lng": -82.4066
+    },
+    {
+        "name": "Chateauguay",
+        "lat": 45.3800,
+        "lng": -73.7500
+    },
+    {
+        "name": "Belleville",
+        "lat": 44.1628,
+        "lng": -77.3832
+    },
+    {
+        "name": "Airdrie",
+        "lat": 51.2917,
+        "lng": -114.0144
+    },
+    {
+        "name": "Drummondville",
+        "lat": 45.8833,
+        "lng": -72.4833
+    },
+    {
+        "name": "Welland",
+        "lat": 42.9833,
+        "lng": -79.2333
+    },
+    {
+        "name": "Fort McMurray",
+        "lat": 56.7262,
+        "lng": -111.3811
+    },
+    {
+        "name": "Prince George",
+        "lat": 53.9171,
+        "lng": -122.7497
+    },
+    {
+        "name": "Sault Ste. Marie",
+        "lat": 46.5219,
+        "lng": -84.3298
+    }
+]
